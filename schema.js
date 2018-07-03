@@ -24,9 +24,15 @@ type Query {
     getAllJobs: [Job]
 }
 
+type Token {
+    token: String!
+}
+
 type Mutation {
     addJob(name: String!, category: String!, description: String!, skillset: String!, 
         username: String): Job
+
+    signupUser(username: String!, email: String!, password: String!): Token
 }
 
 `;
