@@ -31,7 +31,7 @@ type Token {
 type Mutation {
     addJob(name: String!, category: String!, description: String!, skillset: String!, 
         username: String): Job
-
+    signinUser(username: String!, password: String!): Token    
     signupUser(username: String!, email: String!, password: String!): Token
 }
 
