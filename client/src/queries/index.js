@@ -20,7 +20,15 @@ query{
 
 
 // User Queries
-
+export const GET_CURRENT_USER = gql`
+query{
+    getCurrentUser{
+        username
+        joinedDate
+        email
+    }
+}
+`;
 
 // User Mutations
 

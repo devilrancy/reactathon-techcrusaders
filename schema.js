@@ -22,6 +22,7 @@ type User {
 
 type Query {
     getAllJobs: [Job]
+    getCurrentUser: User
 }
 
 type Token {

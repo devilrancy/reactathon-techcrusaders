@@ -12,6 +12,18 @@ exports.resolvers = {
         getAllJobs: async (root, args, { Job }) => {
             const allJobs = await Job.find();
             return allJobs;
+        },
+
+        getCurrentUser: async (root, args, { currentUser, User }) => {
+            if (!currentUser) {
+                return null;
+            }
+            const user = await User.findOne({ username: currentUser.username })
+              .populate({
+                path: 'appliedJobs',
+                model: 'Job'
+              });
+            return user;
         }
     },
 
