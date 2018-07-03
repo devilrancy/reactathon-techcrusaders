@@ -31,7 +31,7 @@ const app = express()
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }))
 
 // bind the schema and mongoose models
-app.use('/graphql', graphqlExpress({
+app.use('/graphql', bodyParser.json(), graphqlExpress({
     schema,
     context: {
         Job,

@@ -1,6 +1,7 @@
 exports.typeDefs = `
 
 type Job {
+    _id: ID
     name: String!
     category: String!
     description: String!
@@ -11,11 +12,21 @@ type Job {
 }
 
 type User {
+    _id: ID
     username: String! @unique
     password: String!
     email: String!
     joinedDate: String
     appliedJobs: [Job]
+}
+
+type Query {
+    getAllJobs: [Job]
+}
+
+type Mutation {
+    addJob(name: String!, category: String!, description: String!, skillset: String!, 
+        username: String): Job
 }
 
 `;
