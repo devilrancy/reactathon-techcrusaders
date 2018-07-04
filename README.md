@@ -1,5 +1,9 @@
-npm --add-python-to-path install --global --production windows-build-tools
+# Tech Crusaders - Job Portal React App
 
-then
+### Team Members
+  - Naresh, Surisetty
+  - Devaraj, Subramani
+  - Mohanapriya, Somasundharam
 
-npm install -g node-gyp
+### Live Preview
+* [Live Preview](https://reactathon-techcrusaders.herokuapp.com)
