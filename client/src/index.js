@@ -13,7 +13,7 @@ import registerServiceWorker from './registerServiceWorker';
 import withSession from './components/withSession';
 
 const client = new ApolloClient({
-    uri: 'http://localhost:4444/graphql',
+    uri: 'https://reactathon-techcrusaders.herokuapp.com/graphql',
     fetchOptions: {
         credentials: 'include'
     },
